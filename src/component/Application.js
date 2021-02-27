@@ -14,7 +14,7 @@ const Application = ({ handleLogout }) => {
   const [value3, setValue3] = useState(1);
   useEffect(() => {
     getdata();
-  }, []);
+  }, [getdata]);
   async function getdata() {
     const result = await Axios.get(
       "http://data.fixer.io/api/latest?access_key=29d8451e7127c1eab9d09ff5ae7d8412"

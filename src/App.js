@@ -36,6 +36,8 @@ const App = () => {
           case "auth/wrong-password":
             setPasswordError(err.message);
             break;
+          default:
+            break;
         }
       });
   };
@@ -52,6 +54,8 @@ const App = () => {
             break;
           case "auth/weak-password":
             setPasswordError(err.message);
+            break;
+          default:
             break;
         }
       });
