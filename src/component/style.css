@@ -1,0 +1,28 @@
+
+.field1{
+    display: flex;
+    margin: 10px;
+
+}
+.field2{
+    display: flex;
+    margin: 10px;
+
+}
+.field3{
+    display: flex;
+    margin: 10px;
+}
+select {
+    width: 150px;
+    outline: none;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn{
+    margin: 10px;
+}
+.box{
+    display: flex;
+}
