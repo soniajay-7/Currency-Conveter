@@ -13,18 +13,18 @@ const Application = ({ handleLogout }) => {
   const [value2, setValue2] = useState(1);
   const [value3, setValue3] = useState(1);
   useEffect(() => {
+    async function getdata() {
+      const result = await Axios.get(
+        "http://data.fixer.io/api/latest?access_key=29d8451e7127c1eab9d09ff5ae7d8412"
+      );
+      console.log(result.data.rates);
+      setCountry1(result.data.rates);
+      setCountry2(result.data.rates);
+      setCountry3(result.data.rates);
+    }
     getdata();
-  }, [getdata]);
-  async function getdata() {
-    const result = await Axios.get(
-      "http://data.fixer.io/api/latest?access_key=29d8451e7127c1eab9d09ff5ae7d8412"
-    );
-    console.log(result.data.rates);
-    setCountry1(result.data.rates);
-    setCountry2(result.data.rates);
-    setCountry3(result.data.rates);
-    console.log(Object.keys(country1));
-  }
+  }, []);
+
   const convert = () => {
     const num = (value2 / value1) * text1;
     setText2(num);
